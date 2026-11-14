@@ -2,6 +2,8 @@ import { useEffect, useRef } from 'react'
 import { BrowserRouter, Routes, Route, Navigate, useLocation } from 'react-router-dom'
 import Navbar from './components/navbar'
 import Footer from './components/footer'
+import Scrollbar from './components/scrollbar'
+import BackToTop from './components/back-to-top'
 import Home from './sections/home'
 import About from './sections/about'
 import Events from './sections/events'
@@ -47,6 +49,8 @@ export default function App() {
   return (
     <BrowserRouter>
       <div className="w-full bg-beige text-royal-dark selection:bg-royal selection:text-beige min-h-screen">
+        <Scrollbar />
+        <BackToTop />
         <Navbar />
         <Routes>
           <Route path="/" element={<SinglePageContent />} />

@@ -37,7 +37,7 @@ export default function Contact() {
           {socialPlatforms.map((platform) => (
             <span
               key={platform}
-              className="px-4 py-2 rounded-lg bg-royal text-xs font-semibold uppercase tracking-wider text-beige border border-royal/20 cursor-pointer hover:bg-royal-navy transition shadow-xs"
+              className="px-4 py-2 rounded-lg bg-royal text-xs font-semibold uppercase tracking-wider text-beige border border-royal/20 cursor-pointer hover:bg-royal-navy transition shadow-sm"
             >
               {platform}
             </span>

@@ -9,7 +9,7 @@ export default function Home() {
       className="w-full min-h-screen bg-beige text-royal-dark flex flex-col justify-center items-center px-6 py-16 relative"
     >
       <div className="max-w-4xl text-center flex flex-col items-center my-auto">
-        <span className="px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider bg-white/80 border border-beige-dark/60 text-royal-navy mb-6 shadow-xs">
+        <span className="px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider bg-white/80 border border-beige-dark/60 text-royal-navy mb-6 shadow-sm">
           Official Google Gemini Student Community
         </span>
         <h1 className="text-4xl sm:text-6xl font-black tracking-tight leading-tight mb-6 text-royal-dark">
