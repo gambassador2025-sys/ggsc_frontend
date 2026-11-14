@@ -5,7 +5,23 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        royal: {
+          dark: '#0A1623',
+          navy: '#111A2B',
+          DEFAULT: '#213960',
+          light: '#304B78',
+          accent: '#376098',
+        },
+        beige: {
+          light: '#FAF8F5',
+          DEFAULT: '#F5F2EB',
+          muted: '#E5E1DB',
+          dark: '#D8D1C6',
+        },
+      },
+    },
   },
   plugins: [],
 }
