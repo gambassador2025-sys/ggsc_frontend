@@ -29,7 +29,7 @@ export default function Contact() {
           </p>
           <p>
             <span className="font-semibold text-royal-navy">Email:</span>{" "}
-            contact@ggscuemk.org
+            ggscuemk@gmail.com
           </p>
         </div>
 

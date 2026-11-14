@@ -4,6 +4,7 @@ import Navbar from './components/navbar'
 import Footer from './components/footer'
 import Scrollbar from './components/scrollbar'
 import BackToTop from './components/back-to-top'
+import Cursor from './components/cursor'
 import Home from './sections/home'
 import About from './sections/about'
 import Events from './sections/events'
@@ -49,6 +50,7 @@ export default function App() {
   return (
     <BrowserRouter>
       <div className="w-full bg-beige text-royal-dark selection:bg-royal selection:text-beige min-h-screen">
+        <Cursor />
         <Scrollbar />
         <BackToTop />
         <Navbar />
