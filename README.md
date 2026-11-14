@@ -25,6 +25,8 @@ ggsc_frontend/
 │   │   └── final-color-pallete.svg # Palette asset
 │   ├── components/        # Reusable global components
 │   │   ├── navbar.tsx     # Animated navbar & radial menu popup
+│   │   ├── scrollbar.tsx  # Dynamic progress bar & theme scrollbar
+│   │   ├── back-to-top.tsx # Floating back to top button with arrow icon
 │   │   └── footer.tsx     # Site footer
 │   ├── sections/          # Page sections
 │   │   ├── home.tsx       # Landing / Hero section

@@ -6,6 +6,35 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Custom theme scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F5F2EB; /* beige */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D8D1C6; /* beige-dark */
+  border-radius: 9999px;
+  border: 2px solid #F5F2EB;
+  transition: background-color 0.2s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #213960; /* royal */
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: #0A1623; /* royal-dark */
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #D8D1C6 #F5F2EB;
+}
+
 /* Radial circular reveal animation emerging directly from the top-right corner */
 .radial-popup {
   clip-path: circle(0% at 100% 0%);

@@ -24,7 +24,7 @@ export default function Team() {
             key={idx}
             className="p-5 rounded-2xl bg-white/90 border border-beige-dark/50 text-center shadow-sm"
           >
-            <div className="w-20 h-20 mx-auto rounded-full bg-royal text-beige flex items-center justify-center font-bold text-lg mb-4 shadow-xs">
+            <div className="w-20 h-20 mx-auto rounded-full bg-royal text-beige flex items-center justify-center font-bold text-lg mb-4 shadow-sm">
               UEMK
             </div>
             <h4 className="font-bold text-base text-royal-navy">Core Member</h4>
