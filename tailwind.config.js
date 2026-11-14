@@ -20,6 +20,11 @@ export default {
           muted: '#E5E1DB',
           dark: '#D8D1C6',
         },
+        cream: {
+          light: '#F8F6F0',
+          DEFAULT: '#EFECE6',
+          dark: '#E5E1D8',
+        },
       },
     },
   },

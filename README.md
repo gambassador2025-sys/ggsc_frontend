@@ -18,12 +18,25 @@ A modern, fast, and scalable frontend web application built with **React 19**, *
 
 ```text
 ggsc_frontend/
-├── public/                # Static assets
-│   └── vite.svg           # Application favicon/icon
 ├── src/
-│   ├── App.tsx            # Main application component
+│   ├── assets/            # Static media and design assets
+│   │   ├── icons/
+│   │   │   └── GGSC.png   # Chapter logo & favicon
+│   │   └── final-color-pallete.svg # Palette asset
+│   ├── components/        # Reusable global components
+│   │   ├── navbar.tsx     # Animated navbar & radial menu popup
+│   │   └── footer.tsx     # Site footer
+│   ├── sections/          # Page sections
+│   │   ├── home.tsx       # Landing / Hero section
+│   │   ├── about.tsx      # About section
+│   │   ├── events.tsx     # Events & hackathons
+│   │   ├── team.tsx       # Team core members
+│   │   ├── gallery.tsx    # Photo gallery & moments
+│   │   ├── reviews.tsx    # Testimonials & reviews
+│   │   └── contact.tsx    # Contact information & socials
+│   ├── App.tsx            # Root component orchestrating sections
 │   ├── main.tsx           # React DOM root entrypoint
-│   ├── index.css          # Tailwind CSS directives & global styles
+│   ├── index.css          # Tailwind directives, animations & global styles
 │   └── vite-env.d.ts      # Vite client TypeScript declarations
 ├── index.html             # Vite entry HTML
 ├── tailwind.config.js     # Tailwind CSS configuration
@@ -67,12 +80,12 @@ Open [http://localhost:5173](http://localhost:5173) in your browser.
 
 ## 📜 Available Scripts
 
-| Command | Description |
-| :--- | :--- |
-| `npm run dev` | Starts the Vite development server with fast HMR on `localhost:5173`. |
-| `npm run build` | Runs TypeScript type checking (`tsc -b`) and bundles for production (`vite build`). |
-| `npm run preview` | Locally serves the production build from `dist/` to verify behavior before deploy. |
-| `npm run lint` | Lints TypeScript and TSX files using ESLint. |
+| Command           | Description                                                                         |
+| :---------------- | :---------------------------------------------------------------------------------- |
+| `npm run dev`     | Starts the Vite development server with fast HMR on `localhost:5173`.               |
+| `npm run build`   | Runs TypeScript type checking (`tsc -b`) and bundles for production (`vite build`). |
+| `npm run preview` | Locally serves the production build from `dist/` to verify behavior before deploy.  |
+| `npm run lint`    | Lints TypeScript and TSX files using ESLint.                                        |
 
 ---
 
@@ -91,15 +104,12 @@ Theme customizations, plugins, or extensions can be added directly to [tailwind.
 ```javascript
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {},
   },
   plugins: [],
-}
+};
 ```
 
 ---
