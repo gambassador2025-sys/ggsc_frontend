@@ -21,9 +21,14 @@ export default {
           dark: '#D8D1C6',
         },
         cream: {
-          light: '#F8F6F0',
-          DEFAULT: '#EFECE6',
-          dark: '#E5E1D8',
+          light: '#FBFBFA',
+          DEFAULT: '#FAF9F6',
+          dark: '#EFECE6',
+        },
+        offwhite: {
+          DEFAULT: '#FAF9F6',
+          warm: '#F8F7F4',
+          muted: '#F4F3EF',
         },
       },
     },

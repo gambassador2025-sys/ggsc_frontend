@@ -145,7 +145,7 @@ export default function Navbar() {
       {/* 
         Full page popup layout matching SS2 with radial circular animation:
         - Expands outward in a circle directly from top-right corner to bottom-left corner
-        - Background: darker white shade (#EFECE6)
+        - Background: off-white shade (#FAF9F6)
         - 2 columns of large typography with smooth #103AA0 hover & left-to-right underline animation (SS3)
       */}
       <div

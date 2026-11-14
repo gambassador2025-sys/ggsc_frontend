@@ -35,6 +35,14 @@ html {
   scrollbar-color: #D8D1C6 #F5F2EB;
 }
 
+/* Hide default cursor on desktop when custom cursor is active */
+@media (pointer: fine) {
+  body.custom-cursor-active,
+  body.custom-cursor-active * {
+    cursor: none !important;
+  }
+}
+
 /* Radial circular reveal animation emerging directly from the top-right corner */
 .radial-popup {
   clip-path: circle(0% at 100% 0%);
@@ -44,4 +52,19 @@ html {
 
 .radial-popup.radial-open {
   clip-path: circle(150% at 100% 0%);
+}
+
+/* Footer interactive letter hover animation (PC only with Google colors) */
+.footer-letter {
+  display: inline-block;
+  transition: transform 0.22s cubic-bezier(0.34, 1.56, 0.64, 1), color 0.2s ease;
+  user-select: none;
+  cursor: default;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .footer-letter:hover {
+    transform: translateY(-8px);
+    color: var(--hover-color, #213960);
+  }
 }
