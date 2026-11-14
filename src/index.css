@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Radial circular reveal animation emerging directly from the top-right corner */
+.radial-popup {
+  clip-path: circle(0% at 100% 0%);
+  transition: clip-path 0.95s cubic-bezier(0.77, 0, 0.175, 1);
+  will-change: clip-path;
+}
+
+.radial-popup.radial-open {
+  clip-path: circle(150% at 100% 0%);
+}
