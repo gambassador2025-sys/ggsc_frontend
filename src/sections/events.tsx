@@ -5,10 +5,10 @@ export default function Events() {
       className="w-full min-h-screen bg-beige text-royal-dark flex flex-col justify-between items-center px-6 py-12"
     >
       <div className="text-center pt-2">
-        <h2 className="text-3xl md:text-4xl font-extrabold tracking-wider uppercase text-royal-dark">
+        <h2 className="text-5xl sm:text-6xl md:text-7xl font-extrabold tracking-wider uppercase text-royal-dark">
           Events
         </h2>
-        <div className="w-16 h-1 bg-royal mx-auto mt-2 rounded-full" />
+        <div className="w-24 h-1.5 bg-royal mx-auto mt-3 rounded-full" />
       </div>
 
       <div className="max-w-5xl w-full grid md:grid-cols-3 gap-6 my-auto">

@@ -39,11 +39,11 @@ export default function Navbar() {
 
   return (
     <>
-      {/* Top left brand text */}
+      {/* Top left brand text (Landing page only - does not follow scroll to other sections) */}
       <a
         href="/"
         onClick={(e) => handleNavClick(e, "/")}
-        className="fixed top-5 left-5 sm:left-8 z-50 font-black text-2xl tracking-wider text-black select-none hover:opacity-80 transition cursor-pointer"
+        className="absolute top-5 left-5 sm:top-7 sm:left-8 z-30 font-black text-2xl tracking-wider select-none hover:opacity-80 transition cursor-pointer text-white drop-shadow-sm"
         aria-label="Home"
       >
         GGSC
@@ -58,7 +58,7 @@ export default function Navbar() {
       */}
       <button
         onClick={() => setIsNavOpen(!isNavOpen)}
-        className="fixed top-5 right-5 sm:top-7 sm:right-8 z-50 p-2 cursor-pointer focus:outline-none select-none text-white transition-transform duration-300 hover:scale-105"
+        className="fixed top-5 right-5 sm:top-7 sm:right-8 z-[100] p-2 cursor-pointer focus:outline-none select-none text-white transition-transform duration-300 hover:scale-105"
         style={{ mixBlendMode: "difference" }}
         aria-label={
           isNavOpen ? "Close navigation menu" : "Open navigation menu"
