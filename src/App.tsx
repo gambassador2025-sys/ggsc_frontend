@@ -34,7 +34,7 @@ function SinglePageContent() {
   }, [pathname])
 
   return (
-    <main>
+    <main className="w-full max-w-full overflow-x-hidden">
       <Home />
       <About />
       <Events />

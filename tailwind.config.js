@@ -31,6 +31,13 @@ export default {
           muted: '#F4F3EF',
         },
       },
+      fontFamily: {
+        sans: ['FoglihtenNo07', 'Georgia', 'serif'],
+        body: ['FoglihtenNo07', 'Georgia', 'serif'],
+        serif: ['FoglihtenNo07', 'Georgia', 'serif'],
+        heading: ['FoglihtenNo07', 'Georgia', 'serif'],
+        foglihten: ['FoglihtenNo07', 'Georgia', 'serif'],
+      },
     },
   },
   plugins: [],
