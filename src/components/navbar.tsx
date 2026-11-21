@@ -28,13 +28,22 @@ export default function Navbar() {
     navigate(path);
   };
 
-  // Close on Escape key press
+  // Close on Escape key press or when team modal opens
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Escape") setIsNavOpen(false);
     };
+    const observer = new MutationObserver(() => {
+      if (document.body.classList.contains("team-modal-active") || document.body.classList.contains("modal-open")) {
+        setIsNavOpen(false);
+      }
+    });
+    observer.observe(document.body, { attributes: true, attributeFilter: ["class"] });
     window.addEventListener("keydown", handleKeyDown);
-    return () => window.removeEventListener("keydown", handleKeyDown);
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("keydown", handleKeyDown);
+    };
   }, []);
 
   return (
@@ -57,6 +66,8 @@ export default function Navbar() {
         - Uses mix-blend-difference so it dynamically inverts against light or dark elements
       */}
       <button
+        id="navbar-toggle-btn"
+        data-navbar-toggle
         onClick={() => setIsNavOpen(!isNavOpen)}
         className="fixed top-5 right-5 sm:top-7 sm:right-8 z-[100] p-2 cursor-pointer focus:outline-none select-none text-white transition-transform duration-300 hover:scale-105"
         style={{ mixBlendMode: "difference" }}

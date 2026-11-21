@@ -3,18 +3,20 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'FoglihtenNo07';
-  src: url('./assets/font/FoglihtenNo07.otf') format('opentype'),
-    url('./assets/font/FoglihtenNo07.ttf') format('truetype');
+  font-family: "FoglihtenNo07";
+  src:
+    url("./assets/font/FoglihtenNo07.otf") format("opentype"),
+    url("./assets/font/FoglihtenNo07.ttf") format("truetype");
   font-weight: 100 900;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'FoglihtenNo07calt';
-  src: url('./assets/font/FoglihtenNo07calt.otf') format('opentype'),
-    url('./assets/font/FoglihtenNo07calt.ttf') format('truetype');
+  font-family: "FoglihtenNo07calt";
+  src:
+    url("./assets/font/FoglihtenNo07calt.otf") format("opentype"),
+    url("./assets/font/FoglihtenNo07calt.ttf") format("truetype");
   font-weight: 100 900;
   font-style: normal;
   font-display: swap;
@@ -22,7 +24,7 @@
 
 body,
 * {
-  font-family: 'FoglihtenNo07', Georgia, serif;
+  font-family: "FoglihtenNo07", Georgia, serif;
 }
 
 h1,
@@ -32,7 +34,7 @@ h4,
 h5,
 h6,
 .font-heading {
-  font-family: 'FoglihtenNo07', Georgia, serif;
+  font-family: "FoglihtenNo07", Georgia, serif;
 }
 
 /* Split-text character styles for scroll-scrubbed reveal */
@@ -65,15 +67,15 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #F5F2EB;
+  background: #f5f2eb;
   /* beige */
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #D8D1C6;
+  background: #d8d1c6;
   /* beige-dark */
   border-radius: 9999px;
-  border: 2px solid #F5F2EB;
+  border: 2px solid #f5f2eb;
   transition: background-color 0.2s ease;
 }
 
@@ -83,18 +85,17 @@ body {
 }
 
 ::-webkit-scrollbar-thumb:active {
-  background: #0A1623;
+  background: #0a1623;
   /* royal-dark */
 }
 
 * {
   scrollbar-width: thin;
-  scrollbar-color: #D8D1C6 #F5F2EB;
+  scrollbar-color: #d8d1c6 #f5f2eb;
 }
 
 /* Hide default cursor on desktop when custom cursor is active */
 @media (pointer: fine) {
-
   body.custom-cursor-active,
   body.custom-cursor-active * {
     cursor: none !important;
@@ -115,7 +116,9 @@ body {
 /* Footer interactive letter hover animation (PC only with Google colors) */
 .footer-letter {
   display: inline-block;
-  transition: transform 0.22s cubic-bezier(0.34, 1.56, 0.64, 1), color 0.2s ease;
+  transition:
+    transform 0.22s cubic-bezier(0.34, 1.56, 0.64, 1),
+    color 0.2s ease;
   user-select: none;
   cursor: default;
 }
@@ -160,4 +163,286 @@ body {
   width: max-content;
   animation: marquee-scroll-reverse 32s linear infinite;
   will-change: transform;
+}
+
+/* ========================================================
+   Hanging Cards Physics Animations (Pendulum & Cable Motion)
+   ======================================================== */
+
+/* 3D Preserves & Clean Card UI Typography */
+.preserve-3d {
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.font-card-ui,
+.font-card-ui * {
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+}
+
+/* Pure CSS Hardware-Accelerated Pendulum Physics Keyframes
+   Free-flowing, dynamic harmonic swings with 3D compositor transforms (translate3d)
+   for 100% jitter-free, 60/120fps fluid motion on all GPUs. */
+
+/* Card 0 (Lead Centered): Smooth, balanced natural swing (Period 3.0s, total arc ~11deg) */
+@keyframes hanging-pendulum-0 {
+  0% {
+    transform: rotateZ(-5.5deg) translate3d(0, 0, 0);
+  }
+  50% {
+    transform: rotateZ(5.5deg) translate3d(0, 0, 0);
+  }
+  100% {
+    transform: rotateZ(-5.5deg) translate3d(0, 0, 0);
+  }
+}
+
+.animate-pendulum-0 {
+  animation: hanging-pendulum-0 3s cubic-bezier(0.37, 0, 0.63, 1) infinite;
+  transform-origin: top center;
+  will-change: transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+/* Card 1: Dynamic natural swing (Period 2.7s, total arc ~11.6deg) */
+@keyframes hanging-pendulum-1 {
+  0% {
+    transform: rotateZ(-6.8deg) translate3d(0, 0, 0);
+  }
+  50% {
+    transform: rotateZ(4.8deg) translate3d(0, 0, 0);
+  }
+  100% {
+    transform: rotateZ(-6.8deg) translate3d(0, 0, 0);
+  }
+}
+
+/* Card 2: Longer string, graceful sweeping swing (Period 3.2s, total arc ~12deg) */
+@keyframes hanging-pendulum-2 {
+  0% {
+    transform: rotateZ(-4.8deg) translate3d(0, 0, 0);
+  }
+  50% {
+    transform: rotateZ(7.2deg) translate3d(0, 0, 0);
+  }
+  100% {
+    transform: rotateZ(-4.8deg) translate3d(0, 0, 0);
+  }
+}
+
+/* Card 3: Dynamic natural swing (Period 2.8s, total arc ~11.6deg) */
+@keyframes hanging-pendulum-3 {
+  0% {
+    transform: rotateZ(-6.2deg) translate3d(0, 0, 0);
+  }
+  50% {
+    transform: rotateZ(5.4deg) translate3d(0, 0, 0);
+  }
+  100% {
+    transform: rotateZ(-6.2deg) translate3d(0, 0, 0);
+  }
+}
+
+/* Card 4: Graceful sweeping swing (Period 3.1s, total arc ~12deg) */
+@keyframes hanging-pendulum-4 {
+  0% {
+    transform: rotateZ(-4.2deg) translate3d(0, 0, 0);
+  }
+  50% {
+    transform: rotateZ(7.8deg) translate3d(0, 0, 0);
+  }
+  100% {
+    transform: rotateZ(-4.2deg) translate3d(0, 0, 0);
+  }
+}
+
+.animate-pendulum-1 {
+  animation: hanging-pendulum-1 2.7s cubic-bezier(0.37, 0, 0.63, 1) infinite;
+  transform-origin: top center;
+  will-change: transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.animate-pendulum-2 {
+  animation: hanging-pendulum-2 3.2s cubic-bezier(0.37, 0, 0.63, 1) infinite;
+  transform-origin: top center;
+  will-change: transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.animate-pendulum-3 {
+  animation: hanging-pendulum-3 2.8s cubic-bezier(0.37, 0, 0.63, 1) infinite;
+  transform-origin: top center;
+  will-change: transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.animate-pendulum-4 {
+  animation: hanging-pendulum-4 3.1s cubic-bezier(0.37, 0, 0.63, 1) infinite;
+  transform-origin: top center;
+  will-change: transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+/* ========================================================
+   Row 2 Distinct Physics Keyframes (Cards 5 to 8)
+   Asymmetric mean positions and different natural periods
+   to prevent repetitive or mirrored motion.
+   ======================================================== */
+
+/* Card 5: Longer string (~90px), Period 3.35s, Mean angle +1.4deg */
+@keyframes hanging-pendulum-5 {
+  0% {
+    transform: rotateZ(7.4deg) translate3d(0, 0, 0);
+  }
+  50% {
+    transform: rotateZ(-4.6deg) translate3d(0, 0, 0);
+  }
+  100% {
+    transform: rotateZ(7.4deg) translate3d(0, 0, 0);
+  }
+}
+
+/* Card 6: Shorter string (~70px), Period 2.65s, Mean angle -1.6deg */
+@keyframes hanging-pendulum-6 {
+  0% {
+    transform: rotateZ(-7.6deg) translate3d(0, 0, 0);
+  }
+  50% {
+    transform: rotateZ(4.4deg) translate3d(0, 0, 0);
+  }
+  100% {
+    transform: rotateZ(-7.6deg) translate3d(0, 0, 0);
+  }
+}
+
+/* Card 7: Longer string (~94px), Period 3.45s, Mean angle +2.2deg */
+@keyframes hanging-pendulum-7 {
+  0% {
+    transform: rotateZ(-3.8deg) translate3d(0, 0, 0);
+  }
+  50% {
+    transform: rotateZ(8.2deg) translate3d(0, 0, 0);
+  }
+  100% {
+    transform: rotateZ(-3.8deg) translate3d(0, 0, 0);
+  }
+}
+
+/* Card 8: Shorter string (~74px), Period 2.75s, Mean angle -2.0deg */
+@keyframes hanging-pendulum-8 {
+  0% {
+    transform: rotateZ(4deg) translate3d(0, 0, 0);
+  }
+  50% {
+    transform: rotateZ(-8deg) translate3d(0, 0, 0);
+  }
+  100% {
+    transform: rotateZ(4deg) translate3d(0, 0, 0);
+  }
+}
+
+.animate-pendulum-5 {
+  animation: hanging-pendulum-5 3.35s cubic-bezier(0.37, 0, 0.63, 1) infinite;
+  transform-origin: top center;
+  will-change: transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.animate-pendulum-6 {
+  animation: hanging-pendulum-6 2.65s cubic-bezier(0.37, 0, 0.63, 1) infinite;
+  transform-origin: top center;
+  will-change: transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.animate-pendulum-7 {
+  animation: hanging-pendulum-7 3.45s cubic-bezier(0.37, 0, 0.63, 1) infinite;
+  transform-origin: top center;
+  will-change: transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.animate-pendulum-8 {
+  animation: hanging-pendulum-8 2.75s cubic-bezier(0.37, 0, 0.63, 1) infinite;
+  transform-origin: top center;
+  will-change: transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+/* Completely hide and disable navbar toggle and brand when team modal is active */
+body.team-modal-active #navbar-toggle-btn,
+body.team-modal-active [data-navbar-toggle],
+body.team-modal-active a[aria-label="Home"],
+body.team-modal-active button[aria-label="Back to top"],
+body.modal-open #navbar-toggle-btn,
+body.modal-open [data-navbar-toggle],
+body.modal-open a[aria-label="Home"],
+body.modal-open button[aria-label="Back to top"] {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+/* Lock background scrolling when team modal is active */
+html.team-modal-active,
+body.team-modal-active,
+html.modal-open,
+body.modal-open {
+  overflow: hidden !important;
+  overscroll-behavior: none !important;
+  scroll-behavior: auto !important;
+}
+
+/* Custom visible scrollbar for Team Modal */
+.modal-custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(33, 57, 96, 0.45) rgba(10, 22, 35, 0.08);
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+}
+
+.modal-custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+  display: block;
+}
+
+.modal-custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(10, 22, 35, 0.08);
+  border-radius: 9999px;
+  margin: 8px 0;
+}
+
+.modal-custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(33, 57, 96, 0.45);
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.modal-custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(33, 57, 96, 0.75);
 }
